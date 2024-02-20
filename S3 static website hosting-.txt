@@ -1,0 +1,34 @@
+S3 static website hosting:-
+
+Here's a step-by-step guide to achieve this:
+
+1. **Create an S3 Bucket:**
+   - Log in to the AWS Management Console.
+   - Go to the S3 service.
+   - Create a new S3 bucket with a name that matches your domain (e.g., `example.com`).
+
+2. **Enable Static Website Hosting:**
+   - Select your S3 bucket in the AWS S3 console.
+   - Go to the "Properties" tab.
+   - Scroll down to the "Static website hosting" card.
+   - Edit it by enabling static website hosting.
+   - Set the index document  (e.g., `index.html`).
+   - Save changes
+
+3. **Configure Bucket Policy:**
+   - Still in the S3 bucket properties, navigate to the "Permissions" tab.
+   - Edit the "Block public access" by unchecking block all public access and save changes.
+   - In  "Bucket Policy" and add a policy allowing public read access to the bucket. Edit      
+     Bucket policy Now using policy generator we can generate bucket policy.click on policy        
+     generator,choose s3 bucket policy in "select type of policy" ,write * in principal       
+     select get object in Action ,  write bucket ARN follwed by /* in ARN feild .
+    Now click on add statement.And then click on generate policy copy the policy and 
+    paste in policy section of edit bucket policy.And then click on save changes
+
+4. **Upload Your Website Content:**
+   - Upload your static website files (HTML, CSS, JS, etc.) to the S3 bucket.
+5.  Select your S3 bucket in the AWS S3 console.
+   - Go to the "Properties" tab.
+   - Scroll down to the "Static website hosting" card.And use static website link to show your website
+
+
